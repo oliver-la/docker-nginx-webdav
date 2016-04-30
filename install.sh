@@ -19,7 +19,7 @@ touch .htdigest
 chmod a+rwx data public .htdigest
 
 # Install composer
-php -r "readfile('https://getcomposer.org/installer');" > composer-setup.php
+php -r "readfile('http://getcomposer.org/installer');" > composer-setup.php
 php composer-setup.php --install-dir=/usr/bin --filename=composer # As executable
 php -r "unlink('composer-setup.php');"
 
