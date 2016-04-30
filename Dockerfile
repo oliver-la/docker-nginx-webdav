@@ -12,7 +12,8 @@ ENV           WEBDAV_PASSWORD admin
 
 # Configure directories and composer.
 COPY          install.sh /install.sh
-CMD           /install.sh
+RUN           chmod +x /install.sh
+RUN           bash /install.sh
 
 # Configure nginx
 RUN           rm -rf /etc/nginx/sites-enabled/*
