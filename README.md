@@ -20,4 +20,4 @@ docker run -d \
            xama/nginx-webdav
 ````
 
-This will start a new webdav instance on `http://localhost:8080/server.php` with the given username and password for authentication.
+This will start a new webdav instance on `http://localhost:8080` with the given username and password for authentication.
