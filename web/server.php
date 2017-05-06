@@ -5,7 +5,7 @@
      * This is a simple implementation of SabreDAV.
      * @author xama (https://www.xama.us)
      * @version 1.0
-     * @license none
+     * @license MIT
      */
 
     use Sabre\DAV;
