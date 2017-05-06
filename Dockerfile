@@ -2,7 +2,7 @@ FROM          debian:jessie
 MAINTAINER    oliver@xama.us
 
 RUN           apt-get update && \
-              apt-get install -y nginx php5-fpm && \
+              DEBIAN_FRONTEND=noninteractive apt-get install -y nginx php5-fpm && \
               rm -rf /var/lib/apt/lists/*
 
 # Default webdav user (CHANGE THIS!)
