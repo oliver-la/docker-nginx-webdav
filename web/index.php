@@ -15,7 +15,7 @@
 
     /* Configure Server */
     $server = new DAV\Server($rootDirectory);
-    $server->setBaseUri('/server.php');
+    $server->setBaseUri('/');
 
     /* Configure lock plugin */
     $lockBackend = new DAV\Locks\Backend\File('data/locks');

@@ -24,7 +24,6 @@ RUN           php -r "readfile('http://getcomposer.org/installer');" > composer-
 
 # Set up entrypoint
 COPY          scripts/install.sh /install.sh
-RUN           chmod +x /install.sh
 
 # Configure nginx
 COPY          config/nginx/default /etc/nginx/sites-enabled/default
@@ -34,8 +33,8 @@ COPY          config/nginx/fastcgi_params /etc/nginx/fastcgi_params
 RUN           ln -sf /dev/stdout /var/log/nginx/access.log && \
               ln -sf /dev/stderr /var/log/nginx/error.log
 
-# copy server.php for client -- sabredav communication
-COPY          web/server.php /var/webdav/server.php
+# copy index.php for client -- sabredav communication
+COPY          web/index.php /var/webdav/index.php
 
 CMD           /install.sh && service php5-fpm start && nginx -g "daemon off;"
 
