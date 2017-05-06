@@ -1,10 +1,10 @@
 server {
         listen 80 default_server;
+        server_name _;
+
         root /var/webdav;
 
         index index.html index.htm index.php;
-
-        server_name _;
 
         location / {
                 # First attempt to serve request as file, then
