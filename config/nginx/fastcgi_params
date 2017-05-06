@@ -25,3 +25,5 @@ fastcgi_param   HTTPS                   $https;
 
 # PHP only, required if PHP was built with --enable-force-cgi-redirect
 fastcgi_param   REDIRECT_STATUS         200;
+
+fastcgi_param PHP_VALUE "upload_max_filesize=4G \n post_max_size=4G";

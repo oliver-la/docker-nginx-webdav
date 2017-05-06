@@ -6,6 +6,8 @@ server {
 
         index index.html index.htm index.php;
 
+        client_max_body_size 4g;
+
         location / {
                 # First attempt to serve request as file, then
                 # as directory, then fall back to displaying a 404.
