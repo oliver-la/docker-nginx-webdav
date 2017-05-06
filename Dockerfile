@@ -2,7 +2,6 @@ FROM          debian:jessie
 MAINTAINER    oliver@xama.us
 
 RUN           apt-get update && \
-              apt-get upgrade -y && \
               apt-get install -y nginx php5-fpm && \
               rm -rf /var/lib/apt/lists/*
 
