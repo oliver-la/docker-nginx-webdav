@@ -27,8 +27,8 @@ COPY          scripts/install.sh /install.sh
 RUN           chmod +x /install.sh
 
 # Configure nginx
-COPY          conf/nginx/default /etc/nginx/sites-enabled/default
-COPY          conf/nginx/fastcgi_params /etc/nginx/fastcgi_params
+COPY          config/nginx/default /etc/nginx/sites-enabled/default
+COPY          config/nginx/fastcgi_params /etc/nginx/fastcgi_params
 
 # forward request and error logs to docker log collector
 RUN           ln -sf /dev/stdout /var/log/nginx/access.log && \
