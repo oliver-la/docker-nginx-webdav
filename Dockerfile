@@ -1,9 +1,19 @@
 FROM          debian:jessie
 MAINTAINER    oliver@xama.us
 
+WORKDIR       /var/webdav
+
 RUN           apt-get update && \
               DEBIAN_FRONTEND=noninteractive apt-get install -y nginx php5-fpm && \
               rm -rf /var/lib/apt/lists/*
+
+
+# Install SabreDAV
+RUN           php -r "readfile('http://getcomposer.org/installer');" > composer-setup.php && \
+              php composer-setup.php --install-dir=/usr/bin --filename=composer && \
+              php -r "unlink('composer-setup.php');" && \
+              composer require sabre/dav ~3.1.3 && \
+              rm /usr/bin/composer
 
 # Default webdav user (CHANGE THIS!)
 ENV           WEBDAV_USERNAME admin
