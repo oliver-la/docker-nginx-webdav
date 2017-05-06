@@ -23,7 +23,7 @@ RUN           php -r "readfile('http://getcomposer.org/installer');" > composer-
               rm /usr/bin/composer
 
 # Set up entrypoint
-COPY          install.sh /install.sh
+COPY          scripts/install.sh /install.sh
 RUN           chmod +x /install.sh
 
 # Configure nginx
