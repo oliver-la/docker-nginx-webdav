@@ -33,8 +33,8 @@ COPY          config/nginx/fastcgi_params /etc/nginx/fastcgi_params
 RUN           ln -sf /dev/stdout /var/log/nginx/access.log && \
               ln -sf /dev/stderr /var/log/nginx/error.log
 
-# copy index.php for client -- sabredav communication
-COPY          web/index.php /var/webdav/index.php
+# copy server.php for client -- sabredav communication
+COPY          web/server.php /var/webdav/server.php
 
 CMD           /install.sh && service php5-fpm start && nginx -g "daemon off;"
 
