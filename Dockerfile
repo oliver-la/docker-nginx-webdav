@@ -22,6 +22,7 @@ RUN           php -r "readfile('http://getcomposer.org/installer');" > composer-
 COPY          scripts/install.sh /install.sh
 
 # Configure nginx
+# NOTE: the default port will be changed to $PORT
 COPY          config/nginx/default /etc/nginx/sites-enabled/default
 COPY          config/nginx/fastcgi_params /etc/nginx/fastcgi_params
 
