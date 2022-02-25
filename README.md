@@ -13,8 +13,8 @@ You can run this container the following way:
 
 ````
 docker run -d \
-           -e WEBDAV_USERNAME=admin \
-           -e WEBDAV_PASSWORD=admin \
+           -e USERNAME=admin \
+           -e PASSWORD=admin \
            -p 8080:80 \
            -v /path/to/your/files:/var/webdav/public \
            xama/nginx-webdav

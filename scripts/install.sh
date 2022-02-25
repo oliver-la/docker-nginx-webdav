@@ -9,4 +9,4 @@ chown -R www-data:www-data /var/webdav
 chmod -R 777 /var/webdav
 
 # Create authentication file
-echo "$WEBDAV_USERNAME:SabreDAV:$(php -r "echo md5('$WEBDAV_USERNAME:SabreDAV:$WEBDAV_PASSWORD');")" >> .htdigest
+echo "$USERNAME:SabreDAV:$(php -r "echo md5('$USERNAME:SabreDAV:$PASSWORD');")" >> .htdigest
